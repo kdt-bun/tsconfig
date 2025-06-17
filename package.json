@@ -1,0 +1,40 @@
+{
+    "name": "@kdt-bun/tsconfig",
+    "type": "module",
+    "version": "0.0.1",
+    "description": "Shared TypeScript configuration presets for modern JavaScript/TypeScript projects with strict type checking and bundler-optimized settings",
+    "author": "Diep Dang <kdt310722@gmail.com>",
+    "license": "MIT",
+    "homepage": "https://github.com/kdt-bun/tsconfig",
+    "repository": "github:kdt-bun/tsconfig",
+    "bugs": {
+        "email": "kdt310722@gmail.com",
+        "url": "https://github.com/kdt-bun/tsconfig/issues"
+    },
+    "sideEffects": false,
+    "exports": {
+        ".": "./tsconfig.json"
+    },
+    "main": "tsconfig.json",
+    "files": [
+        "tsconfig.json",
+        "tsconfig.*.json"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "prepare": "simple-git-hooks"
+    },
+    "commitlint": {
+        "extends": "@commitlint/config-conventional"
+    },
+    "simple-git-hooks": {
+        "commit-msg": "npx --no -- commitlint --edit ${1}"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^19.8.1",
+        "@commitlint/config-conventional": "^19.8.1",
+        "simple-git-hooks": "^2.13.0"
+    }
+}
