@@ -1,7 +1,7 @@
 {
     "name": "@kdt-bun/tsconfig",
     "type": "module",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Shared TypeScript configuration presets for modern JavaScript/TypeScript projects with strict type checking and bundler-optimized settings",
     "author": "Diep Dang <kdt310722@gmail.com>",
     "license": "MIT",
@@ -13,7 +13,11 @@
     },
     "sideEffects": false,
     "exports": {
-        ".": "./tsconfig.json"
+        ".": "./tsconfig.json",
+        "./lib": "./tsconfig.lib.json",
+        "./tsconfig.lib.json": "./tsconfig.lib.json",
+        "./vue": "./tsconfig.vue.json",
+        "./tsconfig.vue.json": "./tsconfig.vue.json"
     },
     "main": "tsconfig.json",
     "files": [
